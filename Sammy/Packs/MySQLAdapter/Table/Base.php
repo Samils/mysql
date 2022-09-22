@@ -63,7 +63,7 @@ namespace Sammy\Packs\MySQLAdapter\Table {
     /**
      *
      */
-    public final function dropTable ($table) {
+    public function dropTable ($table) {
 
       if (!(is_object($this->conn) && ($this->conn instanceof DataObject)))
         return;
@@ -81,7 +81,7 @@ namespace Sammy\Packs\MySQLAdapter\Table {
      * @param  array  $cols [description]
      * @return [type]            [description]
      */
-    public final function model ($table = '', $forceSync = false, $cols = []) {
+    public function model ($table = '', $forceSync = false, $cols = []) {
       if (!(is_object ($this->conn) && ($this->conn instanceof DataObject))) {
         return;
       }
